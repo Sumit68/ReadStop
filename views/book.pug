@@ -1,0 +1,41 @@
+extends base
+include _reviewCard
+block append head
+block content 
+  .container
+    .product-card
+      .container-fliud
+        .wrapper.row
+          #pic-1.tab-pane.active
+            img.product-image(src=book.imageLink style='height: 100%;')
+          .product-details
+            h3.product-title= book.title 
+            span.author= `By ${book.author} (Author)` 
+            .product-rating
+              .stars
+                span.fa.fa-star.checked
+                span.fa.fa-star.checked
+                span.fa.fa-star.checked
+                span.fa.fa-star
+                span.fa.fa-star
+              span.review-no= `${book.ratingsQuantity !== undefined ? book.ratingsQuantity : 0} reviews` 
+            p.product-description= book.description 
+            h4.product-genre
+              | Genre: 
+              span= book.genre
+            h4.product-language 
+              | Language: 
+              span= book.language
+            h4.product-price
+              | current price: 
+              span= `${book.price}$` 
+            p.product-taxes  Inclusive of all taxes
+            .product-action
+              //- button.add-to-cart.btn.btn-default(type='button') Add to Cart 
+              button#purchase-book.buy-now.btn.btn-default(data-book-id=`${book.id}`) Buy now
+              //- button.like.btn.btn-default(type='button')
+              //-   span.fa.fa-heart               
+  section.section-reviews
+    .reviews
+      each review in reviews
+        +reviewCard(review)              

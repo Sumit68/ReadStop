@@ -1,0 +1,45 @@
+extends base
+
+block content
+  main.main
+    .card-container
+    
+      each book in books
+        .card
+          .card__header
+            .card__picture
+              .card__picture-overlay &nbsp;
+              img.card__picture-img(src=book.imageLink)
+            h3.heading-tertirary
+              span= book.title
+
+          .card__details
+            //h4.card__sub-heading= `${book.difficulty} ${book.duration}-day book`
+            p.card__text= book.description
+            .card__data
+              //- svg.card__icon
+              //-   use(xlink:href='/img/icons.svg#icon-map-pin')
+              span= book.language 
+            .card__data
+              //- svg.card__icon
+              //-   use(xlink:href='/img/icons.svg#icon-calendar')
+              span= book.genre
+            .card__data
+              //- svg.card__icon
+              //-   use(xlink:href='/img/icons.svg#icon-flag')
+              span= book.country
+            .card__data
+              //- svg.card__icon
+              //-   use(xlink:href='/img/icons.svg#icon-user')
+              span= book.author
+
+          .card__footer
+            p
+              span.card__footer-value= `$${book.price}`
+              | 
+              span.card__footer-text per person
+            p.card__ratings
+              span.card__footer-value= book.ratingsAverage
+              | 
+              span.card__footer-text= `rating (${book.ratingsQuantity})`
+            a.btn.btn--green.btn--small(href=`/book/${book.slug}`) Details
