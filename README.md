@@ -35,6 +35,8 @@ Our e-commerce bookstore is a secure and user-friendly platform that allows read
 
 - Cookies used for session management to maintain user authentication state across different pages.
 - Implementing secure cookie practices to prevent unauthorized access and data breaches.
+
+## Demo
 ### Overview Page
 ![alt text](https://github.com/Sumit68/ReadStop/blob/main/Screenshot%20(10).png?raw=true)
 ![alt text](https://github.com/Sumit68/ReadStop/blob/main/Screenshot%20(11).png?raw=true)
