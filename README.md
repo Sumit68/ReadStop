@@ -1,5 +1,5 @@
 # ReadStop - Ecommerce bookstore made with Node.js
-
+Our e-commerce bookstore is a secure and user-friendly platform that allows readers to explore, purchase, and review books. With robust user authentication, an admin panel for efficient book management, and personalized profiles, it offers a seamless experience for book enthusiasts to engage with their favorite reads.
 ## Technologies
 - Node.js
 - Express.js
